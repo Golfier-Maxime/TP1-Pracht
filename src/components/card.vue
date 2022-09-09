@@ -5,6 +5,7 @@ import bed from "./icones/bed.vue";
 import superficie from "./icones/superficie.vue";
 
 defineProps({
+  // définir  paramètres card
   price: {
     type: Number,
     default: 2700,
@@ -16,7 +17,7 @@ defineProps({
   favori: Boolean,
   image: {
     type: String,
-    default: "house.png",
+    default: "house.jpg",
   },
 });
 </script>
