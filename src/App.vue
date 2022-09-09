@@ -22,6 +22,12 @@
           <code class="font-mono">/src/pages/Liste.vue</code>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-blue-600 underline" to="/ListeFetch">
+          lien vers
+          <code class="font-mono">/src/pages/Liste-Fetch.vue</code>
+        </router-link>
+      </li>
     </ul>
   </nav>
 

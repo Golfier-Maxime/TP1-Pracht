@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import cardVue from "@/components/card.vue";
-import ListeCard from "@/assets/maisons.json";
+import ListeCard from "../assets/maison.json";
 
 // const ListeCard = [
 //   {
