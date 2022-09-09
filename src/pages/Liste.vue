@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const maison = [
+import cardVue from "@/components/card.vue";
+const ListeCard = [
   {
     price: "2000",
     adresse: "OUI",
@@ -19,5 +20,8 @@ const maison = [
 </script>
 
 <template>
-    
+    <div class="flex" v-for="maison in ListeCard" :key="maison">
+        <cardVue class="" v-bind="maison"/>
+    </div>
 </template>
+

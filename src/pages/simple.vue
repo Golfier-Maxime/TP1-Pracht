@@ -1,22 +1,18 @@
 <script setup lang="ts">
 import cardVue from "@/components/card.vue";
-const ListeCard = [
-  {
-    price: "2000",
-    adresse: "OUI",
-    image: "house.jpg",
-  },
-  {
-    price: "4000",
-    adresse: "NON",
-    image: "house.jpg",
-  },
-];
+const UnObjet = {
+  adresse: "OUI",
+  price: "60",
+  image: "house.jpg",
+};
 </script>
 
 <template>
-    <div class="flex" v-for="maison in ListeCard" :key="maison">
-        <cardVue class="" v-bind="maison"/>
+    <div class="flex flex-col">
+      <cardVue adresse="TEST" price="20" image="house.jpg"/>
+      <br>
+      <cardVue adresse="TEST N°2" price="40" image="house.jpg"/>
+      <br>
+      <cardVue v-bind="UnObjet" />
     </div>
 </template>
-
