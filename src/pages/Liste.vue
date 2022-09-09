@@ -1,22 +1,24 @@
 <script setup lang="ts">
 import cardVue from "@/components/card.vue";
-const ListeCard = [
-  {
-    price: "2000",
-    adresse: "OUI",
-    image: "house.jpg",
-  },
-  {
-    price: "4000",
-    adresse: "NON",
-    image: "house.jpg",
-  },
-  {
-    price: "6000",
-    adresse: "PEUX ETRE",
-    image: "house.jpg",
-  },
-];
+import ListeCard from "@/assets/maisons.json";
+
+// const ListeCard = [
+//   {
+//     price: "2000",
+//     adresse: "OUI",
+//     image: "house.jpg",
+//   },
+//   {
+//     price: "4000",
+//     adresse: "NON",
+//     image: "house.jpg",
+//   },
+//   {
+//     price: "6000",
+//     adresse: "PEUX ETRE",
+//     image: "house.jpg",
+//   },
+// ];
 </script>
 
 <template>
