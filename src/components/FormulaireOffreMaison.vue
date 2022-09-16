@@ -26,13 +26,14 @@ const maison = ref({});
         }"
         :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
       >
-        <FormKit name="adresse" label="adresse" />
-        <FormKit name="price" label="prix" type="number" />
+        <FormKit name="adresse" label="Adresse" />
+        <FormKit name="price" label="Prix" type="number" />
+        <FormKit name="name" label="Nom" type="text" />
         <FormKit
           name="favori"
-          label="mettre en valeur"
+          label="Mettre en Favori"
           type="checkbox"
-          wrapper-class="flex"
+          wrapper-class="flex gap-2"
         />
       </FormKit>
     </div>

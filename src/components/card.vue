@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { HeartIcon } from "@heroicons/vue/outline";
+import { HeartIcon } from "@heroicons/vue/24/outline";
 import bath from "./icones/bath.vue";
 import bed from "./icones/bed.vue";
 import superficie from "./icones/superficie.vue";
@@ -17,7 +17,11 @@ defineProps({
   favori: Boolean,
   image: {
     type: String,
-    default: "house.jpg",
+    default: "/house.jpg",
+  },
+  name: {
+    type: String,
+    default: "OUI",
   },
 });
 </script>
@@ -46,7 +50,7 @@ defineProps({
             <p class="text-2xl font-bold text-indigo-500">${{ price }}</p>
             <span class="text-xs font-normal text-gray-900">/month</span>
           </div>
-          <p class="text-2xl font-bold">Beverly Springfield</p>
+          <p class="text-2xl font-bold">{{ name }}</p>
         </div>
         <div
           class="
@@ -59,7 +63,10 @@ defineProps({
             border-2 border-indigo-100
           "
         >
-          <!-- <HeartIcon class="h-6 stroke-indigo-500" :class="{'fill-red-500 stroke-red-500': favori}"></HeartIcon> -->
+          <HeartIcon
+            class="h-6 stroke-indigo-500"
+            :class="{ 'fill-red-500 stroke-red-500': favori }"
+          ></HeartIcon>
         </div>
       </div>
       <p class="text-base font-normal text-gray-900">
