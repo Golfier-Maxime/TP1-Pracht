@@ -37,7 +37,13 @@
       <li>
         <router-link class="text-pink-600 underline" to="/Supabase">
           lien vers
-          <code class="font-mono">/src/pages/edit/Supabase.vue</code>
+          <code class="font-mono">/src/pages/Supabase.vue</code>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-yellow-600 underline" to="/Login">
+          lien vers
+          <code class="font-mono">/src/pages/Login.vue</code>
         </router-link>
       </li>
     </ul>

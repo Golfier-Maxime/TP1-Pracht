@@ -31,6 +31,10 @@ defineProps({
     type: Number,
     default: 1,
   },
+  Surface: {
+    type: Number,
+    default: 1,
+  },
 });
 </script>
   <template>
@@ -92,7 +96,7 @@ defineProps({
         </div>
         <div class="flex items-center gap-2">
           <superficie class="h-5 stroke-indigo-500"></superficie>
-          <span class="text-xs text-gray-500">6x7.5 m²</span>
+          <span class="text-xs text-gray-500">{{ Surface }} m²</span>
         </div>
       </div>
     </figcaption>
