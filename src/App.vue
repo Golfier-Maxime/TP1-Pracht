@@ -34,15 +34,19 @@
           <code class="font-mono">/src/pages/edit/New.vue</code>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-pink-600 underline" to="/Supabase">
+          lien vers
+          <code class="font-mono">/src/pages/edit/Supabase.vue</code>
+        </router-link>
+      </li>
     </ul>
   </nav>
 
   <!-- Affiche les pages -->
   <Suspense>
     <router-view class="m-2 border-2 p-2" />
-    <template #fallback>
-      Loading...
-    </template>
+    <template #fallback> Loading... </template>
   </Suspense>
 </template>
 

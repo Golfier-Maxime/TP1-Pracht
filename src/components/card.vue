@@ -23,6 +23,14 @@ defineProps({
     type: String,
     default: "OUI",
   },
+  NbrSDB: {
+    type: Number,
+    default: 1,
+  },
+  NbrChambre: {
+    type: Number,
+    default: 1,
+  },
 });
 </script>
   <template>
@@ -76,11 +84,11 @@ defineProps({
       <div class="flex justify-between">
         <div class="flex items-center gap-2">
           <bed class="h-5 stroke-indigo-500"></bed>
-          <span class="text-xs text-gray-500">4 Beds</span>
+          <span class="text-xs text-gray-500">{{ NbrChambre }} Beds</span>
         </div>
         <div class="flex items-center gap-2">
           <bath class="h-5 stroke-indigo-500"></bath>
-          <span class="text-xs text-gray-500">2 Bathrooms</span>
+          <span class="text-xs text-gray-500">{{ NbrSDB }} Bathrooms</span>
         </div>
         <div class="flex items-center gap-2">
           <superficie class="h-5 stroke-indigo-500"></superficie>
