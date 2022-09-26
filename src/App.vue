@@ -46,6 +46,12 @@
           <code class="font-mono">/src/pages/Login.vue</code>
         </router-link>
       </li>
+      <li>
+        <router-link class="text-gray-600 underline" to="/Quartier/index">
+          lien vers
+          <code class="font-mono">/src/pages/Quartier/index.vue</code>
+        </router-link>
+      </li>
     </ul>
   </nav>
 
