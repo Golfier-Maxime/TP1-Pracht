@@ -14,5 +14,4 @@ if (error) console.log("n'a pas pu charger la table quartiercommune :", error);
       </li>
     </ul>
   </section>
-  =
 </template>
