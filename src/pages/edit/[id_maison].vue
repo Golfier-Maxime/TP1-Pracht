@@ -6,6 +6,6 @@ defineProps({ id_maison: String });
 <template>
   <div>
     <!-- <p>New</p> -->
-    <FormOffMai />
+    <FormOffMai :id="id_maison"/>
   </div>
 </template>

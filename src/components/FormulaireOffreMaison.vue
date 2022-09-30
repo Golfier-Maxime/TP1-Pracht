@@ -2,6 +2,7 @@
 import { ref } from "@vue/reactivity";
 import card from "@/components/card.vue";
 import { useRouter } from "vue-router";
+import { supabase } from "@/supabase";
 const router = useRouter();
 // on fait une variable réactive qui reference les données
 // ATTENTION : faire une ref pas une Reactive car :
@@ -15,6 +16,16 @@ async function upsertMaison(dataForm, node) {
     node.setErrors([]);
     router.push({ name: "edit-id", params: { id: data[0].id } });
   }
+}
+const props = defineProps(["id"]);
+if (props.id) {
+  // On charge les données de la maison
+  let { data, error } = await supabase
+    .from("maison")
+    .select("*")
+    .eq("id_maison", props.id);
+  if (error) console.log("n'a pas pu charger le table Maison :", error);
+  else maison.value = (data as any[])[0];
 }
 </script>
 
