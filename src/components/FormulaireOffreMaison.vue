@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from "@vue/reactivity";
 import card from "@/components/card.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 // on fait une variable réactive qui reference les données
 // ATTENTION : faire une ref pas une Reactive car :
 // c'est l'objet qui doit etre réactif, pas les props
@@ -9,6 +11,10 @@ const maison = ref({});
 async function upsertMaison(dataForm, node) {
   const { data, error } = await supabase.from("maison").upsert(dataForm);
   if (error) node.setErrors([error.message]);
+  else {
+    node.setErrors([]);
+    router.push({ name: "edit-id", params: { id: data[0].id } });
+  }
 }
 </script>
 
