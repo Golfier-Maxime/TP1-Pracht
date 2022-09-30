@@ -5,6 +5,11 @@ import card from "@/components/card.vue";
 // ATTENTION : faire une ref pas une Reactive car :
 // c'est l'objet qui doit etre réactif, pas les props
 const maison = ref({});
+
+async function upsertMaison(dataForm, node) {
+  const { data, error } = await supabase.from("maison").upsert(dataForm);
+  if (error) node.setErrors([error.message]);
+}
 </script>
 
 <template>
@@ -18,6 +23,7 @@ const maison = ref({});
       <FormKit
         type="form"
         v-model="maison"
+        @submit="upsertMaison"
         :config="{
           classes: {
             input: 'p-1 rounded border-gray-300 shadow-sm border',
@@ -29,6 +35,10 @@ const maison = ref({});
         <FormKit name="adresse" label="Adresse" />
         <FormKit name="price" label="Prix" type="number" />
         <FormKit name="name" label="Nom" type="text" />
+        <FormKit name="NbrSDB" label="NbrSDB" type="number" />
+        <FormKit name="NbrChambre" label="NbrChambre" type="number" />
+        <FormKit name="Surface" label="Surface" type="number" />
+        <FormKit name="image" label="image" type="text" />
         <FormKit
           name="favori"
           label="Mettre en Favori"
