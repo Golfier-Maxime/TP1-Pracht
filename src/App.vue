@@ -1,8 +1,7 @@
 <template>
-  <nav>
-    <h4 class="text-xl">
-      menu (dans <code class="font-mono">/src/App.vue</code>)
-    </h4>
+  <nav class="ml-2">
+    <h1 class="mt-2 text-xl font-bold">Maxime GOLFIER - MMI 2 - B2</h1>
+    <h4 class="">menu (dans <code class="font-mono">/src/App.vue</code>)</h4>
     <ul>
       <li>
         <router-link class="text-red-600 underline" to="/">
@@ -47,7 +46,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="text-gray-600 underline" to="/Quartier/index">
+        <router-link class="text-gray-600 underline" to="/Quartier/">
           lien vers
           <code class="font-mono">/src/pages/Quartier/index.vue</code>
         </router-link>
