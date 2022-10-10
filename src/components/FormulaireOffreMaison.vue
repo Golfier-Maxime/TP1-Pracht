@@ -37,31 +37,20 @@ if (props.id) {
       <card v-bind="maison" />
     </div>
     <div class="p-2">
-      <FormKit
-        type="form"
-        v-model="maison"
-        @submit="upsertMaison"
-        :config="{
-          classes: {
-            input: 'p-1 rounded border-gray-300 shadow-sm border',
-            label: 'text-gray-600',
-          },
-        }"
-        :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
-      >
+      <FormKit type="form" v-model="maison" @submit="upsertMaison" :config="{
+        classes: {
+          input: 'p-1 rounded border-gray-300 shadow-sm border',
+          label: 'text-gray-600',
+        },
+      }" :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }">
         <FormKit name="adresse" label="Adresse" />
         <FormKit name="price" label="Prix" type="number" />
         <FormKit name="name" label="Nom" type="text" />
         <FormKit name="NbrSDB" label="NbrSDB" type="number" />
         <FormKit name="NbrChambre" label="NbrChambre" type="number" />
         <FormKit name="Surface" label="Surface" type="number" />
-        <FormKit name="image" label="image" type="text" />
-        <FormKit
-          name="favori"
-          label="Mettre en Favori"
-          type="checkbox"
-          wrapper-class="flex gap-2"
-        />
+        <FormKit name="image" label="image" placeholder="house.jpg" type="text" />
+        <FormKit name="favori" label="Mettre en Favori" type="checkbox" wrapper-class="flex gap-2" />
       </FormKit>
     </div>
   </div>

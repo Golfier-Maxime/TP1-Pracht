@@ -52,7 +52,11 @@
         </router-link>
       </li>
     </ul>
+    <p>Id de la priemième maison pour l'update : 0bcb1d22-04d8-4da8-a233-6906574b67ed</p>
+    <p>/src/pages/edit/[id_maison].vue</p>
+
   </nav>
+
 
   <!-- Affiche les pages -->
   <Suspense>
